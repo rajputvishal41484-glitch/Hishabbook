@@ -1,0 +1,24 @@
+﻿Type,Date,Title,Category / Source,Amount (INR),Payment Method,Month,Year,Notes
+Expense,23/11/2026,Morning Buffalo Milk (2L),Milk / दूध,140.00,Cash,11,2026,Daily dairy delivery
+Expense,23/11/2026,Fresh Vegetables & Atta,Grocery / किराना,645.50,UPI,11,2026,Weekly kirana basket
+Income,23/11/2026,UPI Cashback & Refund,Refund / Cashback,350.00,UPI,11,2026,Utility bill cashback
+Expense,22/11/2026,Scooter Petrol Refill,Petrol / Diesel,520.00,UPI,11,2026,IndianOil pump
+Expense,21/11/2026,Family Dinner at Spice Garden,Food / Restaurant,1280.00,UPI,11,2026,Weekend dinner
+Expense,20/11/2026,Pharmacy & Vitamin Supplements,Medical / Healthcare,485.00,Card,11,2026,Medical store
+Expense,19/11/2026,Metro & Auto Commute,Travel / Transport,260.00,UPI,11,2026,Office travel
+Income,12/11/2026,UI Consulting Retainer,Freelance,12500.00,Bank,11,2026,Client milestone payment
+Expense,08/11/2026,Mobile Recharge (Family),Mobile / Phone Bill,599.00,UPI,11,2026,84-day prepaid plan
+Expense,06/11/2026,Fiber Broadband Plan,Internet Bill,799.00,Card,11,2026,100 Mbps unlimited
+Expense,05/11/2026,Home Electricity Bill,Electricity Bill,1840.00,UPI,11,2026,Monthly electricity bill
+Expense,01/11/2026,Monthly House Rent,House Rent,14500.00,Bank,11,2026,NEFT transfer to landlord
+Income,01/11/2026,Monthly Salary Credit,Salary,65000.00,Bank,11,2026,Primary monthly salary
+Income,19/10/2026,Dividend Payout,Investments,2800.00,Bank,10,2026,Quarterly equity dividend
+Expense,18/10/2026,Festive Clothing & Footwear,Shopping,3250.00,Card,10,2026,Seasonal shopping
+Expense,14/10/2026,Online Course & Books,Education,1499.00,Card,10,2026,Skill certification
+Expense,10/10/2026,Municipal Water Bill,Water Bill,320.00,UPI,10,2026,Last month utility
+Expense,04/10/2026,Monthly Kirana Stockup,Grocery / किराना,2890.00,UPI,10,2026,"Rice, dal, oil, spices"
+Expense,01/10/2026,Last Month House Rent,House Rent,14500.00,Bank,10,2026,Monthly rent
+Income,01/10/2026,Last Month Salary Credit,Salary,65000.00,Bank,10,2026,Monthly salary
+Expense,12/09/2026,Quarterly Fuel & Service,Petrol / Diesel,2150.00,Card,9,2026,Full tank + oil top-up
+Expense,01/09/2026,Two Months Ago Rent,House Rent,14500.00,Bank,9,2026,Monthly rent
+Income,01/09/2026,Two Months Ago Salary,Salary,65000.00,Bank,9,2026,Monthly salary
