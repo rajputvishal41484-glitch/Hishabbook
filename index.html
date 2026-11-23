@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#145c45">
+  <meta name="description" content="HisabBook — Personal Expense Manager">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>HisabBook – Smart Expense Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">H</div><div><strong>HisabBook</strong><small data-i18n="tagline">Smart Expense Manager</small></div></div>
+      <div class="top-actions"><button class="icon-btn" id="themeQuick" aria-label="Toggle theme">◐</button><button class="avatar" id="settingsQuick">HB</button></div>
+    </header>
+    <main id="main">
+      <section class="view active" id="homeView">
+        <div class="welcome-row"><div><p class="eyebrow" data-i18n="overview">YOUR MONEY, IN CONTROL</p><h1 data-i18n="dashboard">Dashboard</h1></div><span class="today-chip" id="todayLabel"></span></div>
+        <div class="summary-grid">
+          <article class="summary-card dark-card"><span data-i18n="monthExpenses">This month</span><strong id="monthTotal">₹0</strong><small id="monthCount">0 transactions</small></article>
+          <article class="summary-card"><span data-i18n="todayExpenses">Today</span><strong id="todayTotal">₹0</strong><small data-i18n="spentToday">Spent today</small></article>
+          <article class="summary-card"><span data-i18n="yearExpenses">This year</span><strong id="yearTotal">₹0</strong><small data-i18n="calendarYear">Calendar year</small></article>
+          <article class="summary-card"><span data-i18n="transactions">Transactions</span><strong id="allCount">0</strong><small data-i18n="allTime">All time</small></article>
+        </div>
+        <div class="section-heading"><div><h2 data-i18n="monthlyTrend">Monthly trend</h2><p data-i18n="lastSixMonths">Your last 6 months</p></div></div>
+        <article class="panel"><div class="chart" id="homeChart"></div></article>
+        <div class="two-col">
+          <div><div class="section-heading"><div><h2 data-i18n="categories">Categories</h2><p data-i18n="monthBreakdown">This month's breakdown</p></div></div><article class="panel" id="categorySummary"></article></div>
+          <div><div class="section-heading"><div><h2 data-i18n="topCategory">Top category</h2><p data-i18n="highestSpend">Highest spending</p></div></div><article class="panel top-category" id="topCategory"></article></div>
+        </div>
+        <div class="section-heading"><div><h2 data-i18n="recent">Recent transactions</h2><p data-i18n="latestActivity">Your latest activity</p></div><button class="text-btn" data-go="transactions" data-i18n="seeAll">See all</button></div>
+        <article class="panel"><div id="recentList" class="transaction-list"></div></article>
+        <button class="fab" id="quickAdd">＋ <span data-i18n="addExpense">Add expense</span></button>
+      </section>
+
+      <section class="view" id="transactionsView">
+        <div class="page-heading"><div><p class="eyebrow" data-i18n="moneyJournal">MONEY JOURNAL</p><h1 data-i18n="transactions">Transactions</h1></div><button class="primary-btn" id="addFromTransactions">＋ <span data-i18n="add">Add</span></button></div>
+        <div class="filter-row"><input id="transactionSearch" type="search" placeholder="Search expenses…" data-placeholder="search"><select id="transactionCategory"><option value="all" data-i18n="allCategories">All categories</option></select><select id="transactionSort"><option value="newest" data-i18n="newest">Newest</option><option value="oldest" data-i18n="oldest">Oldest</option><option value="high" data-i18n="highestAmount">Highest amount</option><option value="low" data-i18n="lowestAmount">Lowest amount</option></select></div>
+        <div class="date-filter"><label><span data-i18n="from">From</span><input type="date" id="txFrom"></label><label><span data-i18n="to">To</span><input type="date" id="txTo"></label><button class="secondary-btn" id="clearTxFilters" data-i18n="clear">Clear</button></div>
+        <div class="list-summary"><strong id="txResultCount">0 transactions</strong><strong id="txResultTotal">₹0</strong></div>
+        <article class="panel"><div id="transactionList" class="transaction-list"></div></article>
+      </section>
+
+      <section class="view" id="reportsView">
+        <div class="page-heading"><div><p class="eyebrow" data-i18n="understandSpending">UNDERSTAND YOUR SPENDING</p><h1 data-i18n="reports">Reports</h1></div><button class="secondary-btn" id="printReport">⇩ <span data-i18n="pdfPrint">PDF / Print</span></button></div>
+        <article class="panel report-controls">
+          <label><span data-i18n="period">Report period</span><select id="reportPeriod"><option value="daily" data-i18n="daily">Daily</option><option value="monthly" selected data-i18n="monthly">Monthly</option><option value="quarterly" data-i18n="quarterly">Quarterly</option><option value="halfyear" data-i18n="halfYearly">Half-yearly</option><option value="yearly" data-i18n="yearly">Yearly</option><option value="custom" data-i18n="customRange">Custom range</option></select></label>
+          <label><span data-i18n="referenceDate">Reference date</span><input type="date" id="reportDate"></label>
+          <label class="custom-date"><span data-i18n="from">From</span><input type="date" id="reportFrom"></label>
+          <label class="custom-date"><span data-i18n="to">To</span><input type="date" id="reportTo"></label>
+          <label><span data-i18n="category">Category</span><select id="reportCategory"><option value="all" data-i18n="allCategories">All categories</option></select></label>
+        </article>
+        <div class="summary-grid report-stats"><article class="summary-card dark-card"><span data-i18n="totalExpense">Total expense</span><strong id="reportTotal">₹0</strong></article><article class="summary-card"><span data-i18n="transactions">Transactions</span><strong id="reportCount">0</strong></article><article class="summary-card"><span data-i18n="highestExpense">Highest expense</span><strong id="reportHighest">₹0</strong></article><article class="summary-card"><span data-i18n="dailyAverage">Daily average</span><strong id="reportAverage">₹0</strong></article></div>
+        <div class="section-heading"><div><h2 data-i18n="categoryBreakdown">Category breakdown</h2><p data-i18n="filteredSpending">Based on selected filters</p></div></div><article class="panel" id="reportCategories"></article>
+        <div class="section-heading"><div><h2 data-i18n="dailyDetails">Daily details</h2><p data-i18n="spendingByDate">Spending by date</p></div></div><article class="panel"><div id="dailyDetails" class="transaction-list"></div></article>
+        <div class="section-heading"><div><h2 data-i18n="categoryHistory">Transaction history</h2><p data-i18n="matchingEntries">Matching entries</p></div></div><article class="panel"><div id="reportTransactions" class="transaction-list"></div></article>
+      </section>
+
+      <section class="view" id="budgetView">
+        <div class="page-heading"><div><p class="eyebrow" data-i18n="spendWithPurpose">SPEND WITH PURPOSE</p><h1 data-i18n="budget">Budget</h1></div><button class="primary-btn" id="setBudgetBtn">＋ <span data-i18n="setBudget">Set budget</span></button></div>
+        <article class="panel budget-main" id="overallBudget"></article>
+        <div class="section-heading"><div><h2 data-i18n="categoryBudgets">Category budgets</h2><p data-i18n="monthlyLimits">Monthly spending limits</p></div></div>
+        <article class="panel"><div id="categoryBudgets"></div></article>
+      </section>
+
+      <section class="view" id="settingsView">
+        <div class="page-heading"><div><p class="eyebrow" data-i18n="personalize">PERSONALIZE YOUR EXPERIENCE</p><h1 data-i18n="settings">Settings</h1></div></div>
+        <article class="panel settings-panel">
+          <h2 data-i18n="preferences">Preferences</h2>
+          <label class="setting-row"><span><strong data-i18n="language">Language</strong><small data-i18n="appLanguage">App display language</small></span><select id="languageSetting"><option value="both">हिंदी + English</option><option value="hi">हिंदी</option><option value="en">English</option></select></label>
+          <label class="setting-row"><span><strong data-i18n="currency">Currency</strong><small data-i18n="currencyUsed">Used for all amounts</small></span><select id="currencySetting"><option value="INR">INR ₹</option><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option></select></label>
+          <label class="setting-row"><span><strong data-i18n="dateFormat">Date format</strong><small>DD/MM/YYYY</small></span><select id="dateFormat"><option value="DMY">DD/MM/YYYY</option><option value="YMD">YYYY-MM-DD</option><option value="MDY">MM/DD/YYYY</option></select></label>
+          <label class="setting-row"><span><strong data-i18n="theme">Theme</strong><small data-i18n="appearance">Appearance</small></span><select id="themeSetting"><option value="light" data-i18n="light">Light</option><option value="dark" data-i18n="dark">Dark</option><option value="system" data-i18n="system">System</option></select></label>
+        </article>
+        <article class="panel settings-panel">
+          <h2 data-i18n="categories">Categories</h2><div id="settingsCategories"></div><button class="secondary-btn full-btn" id="addCategoryBtn">＋ <span data-i18n="addCategory">Add category</span></button>
+        </article>
+        <article class="panel settings-panel">
+          <h2 data-i18n="dataBackup">Data & backup</h2>
+          <div class="setting-actions"><button class="secondary-btn" id="exportCsv">⇩ <span data-i18n="exportCsv">Export CSV</span></button><button class="secondary-btn" id="backupJson">⇩ <span data-i18n="backupJson">Backup data</span></button><label class="secondary-btn file-btn">⇧ <span data-i18n="restoreBackup">Restore backup</span><input type="file" id="restoreFile" accept="application/json"></label></div>
+          <p class="muted small" data-i18n="localStorageNote">Your data is stored on this device. Keep a backup to protect it.</p>
+          <button class="danger-outline full-btn" id="resetData" data-i18n="resetData">Reset all app data</button>
+        </article>
+        <div class="footer-note">HisabBook v1.0 · <span data-i18n="privacyLocal">Private by design · Stored on this device</span></div>
+      </section>
+    </main>
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-tab="home"><span>⌂</span><small data-i18n="home">Home</small></button>
+      <button class="nav-item" data-tab="transactions"><span>⇄</span><small data-i18n="transactions">Transactions</small></button>
+      <button class="nav-item" data-tab="reports"><span>▥</span><small data-i18n="reports">Reports</small></button>
+      <button class="nav-item" data-tab="budget"><span>◷</span><small data-i18n="budget">Budget</small></button>
+      <button class="nav-item" data-tab="settings"><span>⚙</span><small data-i18n="settings">Settings</small></button>
+    </nav>
+  </div>
+
+  <dialog id="expenseDialog">
+    <form id="expenseForm" method="dialog" class="dialog-form">
+      <div class="dialog-head"><div><p class="eyebrow" data-i18n="transactionDetails">TRANSACTION DETAILS</p><h2 id="expenseDialogTitle" data-i18n="addExpense">Add expense</h2></div><button type="button" class="close-btn" data-close="expenseDialog">×</button></div>
+      <input type="hidden" id="expenseId">
+      <label><span data-i18n="amount">Amount</span><div class="amount-input"><b id="currencySymbol">₹</b><input type="number" id="expenseAmount" min="0.01" step="0.01" required placeholder="0.00"></div></label>
+      <label><span data-i18n="titleDescription">Title / Description</span><input id="expenseTitle" maxlength="80" required placeholder="e.g. Monthly groceries"></label>
+      <div class="form-grid"><label><span data-i18n="category">Category</span><select id="expenseCategory" required></select></label><label><span data-i18n="date">Date</span><input type="date" id="expenseDate" required></label></div>
+      <label><span data-i18n="paymentMethod">Payment method</span><select id="expensePayment"><option>Cash</option><option>UPI</option><option>Bank</option><option>Card</option><option>Other</option></select></label>
+      <label><span data-i18n="notesOptional">Notes (optional)</span><textarea id="expenseNotes" rows="2" maxlength="300" placeholder="Add a note…"></textarea></label>
+      <p class="form-error" id="expenseError"></p>
+      <div class="dialog-actions"><button type="button" class="secondary-btn" data-close="expenseDialog" data-i18n="cancel">Cancel</button><button type="submit" class="primary-btn" data-i18n="saveExpense">Save expense</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="budgetDialog"><form id="budgetForm" method="dialog" class="dialog-form"><div class="dialog-head"><div><p class="eyebrow" data-i18n="monthlyPlanning">MONTHLY PLANNING</p><h2 data-i18n="setBudget">Set budget</h2></div><button type="button" class="close-btn" data-close="budgetDialog">×</button></div><label><span data-i18n="budgetType">Budget type</span><select id="budgetType"><option value="overall" data-i18n="overallBudget">Overall monthly budget</option><option value="category" data-i18n="categoryBudget">Category budget</option></select></label><label id="budgetCategoryWrap" hidden><span data-i18n="category">Category</span><select id="budgetCategory"></select></label><label><span data-i18n="monthlyLimit">Monthly limit</span><input id="budgetAmount" type="number" min="0.01" step="0.01" required placeholder="0.00"></label><div class="dialog-actions"><button type="button" class="secondary-btn" data-close="budgetDialog" data-i18n="cancel">Cancel</button><button type="submit" class="primary-btn" data-i18n="save">Save</button></div></form></dialog>
+
+  <dialog id="categoryDialog"><form id="categoryForm" method="dialog" class="dialog-form"><div class="dialog-head"><div><p class="eyebrow" data-i18n="organizeSpending">ORGANIZE SPENDING</p><h2 data-i18n="addCategory">Add category</h2></div><button type="button" class="close-btn" data-close="categoryDialog">×</button></div><label><span data-i18n="categoryName">Category name</span><input id="categoryName" required maxlength="35"></label><label><span data-i18n="iconEmoji">Icon (emoji)</span><input id="categoryIcon" maxlength="4" value="📌"></label><div class="dialog-actions"><button type="button" class="secondary-btn" data-close="categoryDialog" data-i18n="cancel">Cancel</button><button type="submit" class="primary-btn" data-i18n="save">Save</button></div></form></dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

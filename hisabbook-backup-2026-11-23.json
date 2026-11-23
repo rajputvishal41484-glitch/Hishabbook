@@ -1,0 +1,477 @@
+{
+  "version": 2,
+  "exportedAt": "2026-11-23T12:20:17.289Z",
+  "categories": [
+    {
+      "id": "cat_grocery",
+      "name": "Grocery / किराना",
+      "icon": "ShoppingBasket",
+      "color": "#10b981",
+      "isDefault": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "cat_milk",
+      "name": "Milk / दूध",
+      "icon": "Milk",
+      "color": "#0ea5e9",
+      "isDefault": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "cat_fuel",
+      "name": "Petrol / Diesel",
+      "icon": "Fuel",
+      "color": "#f97316",
+      "isDefault": true,
+      "sortOrder": 3
+    },
+    {
+      "id": "cat_electricity",
+      "name": "Electricity Bill",
+      "icon": "Zap",
+      "color": "#eab308",
+      "isDefault": true,
+      "sortOrder": 4
+    },
+    {
+      "id": "cat_water",
+      "name": "Water Bill",
+      "icon": "Droplets",
+      "color": "#06b6d4",
+      "isDefault": true,
+      "sortOrder": 5
+    },
+    {
+      "id": "cat_mobile",
+      "name": "Mobile / Phone Bill",
+      "icon": "Smartphone",
+      "color": "#6366f1",
+      "isDefault": true,
+      "sortOrder": 6
+    },
+    {
+      "id": "cat_internet",
+      "name": "Internet Bill",
+      "icon": "Wifi",
+      "color": "#3b82f6",
+      "isDefault": true,
+      "sortOrder": 7
+    },
+    {
+      "id": "cat_rent",
+      "name": "House Rent",
+      "icon": "Home",
+      "color": "#8b5cf6",
+      "isDefault": true,
+      "sortOrder": 8
+    },
+    {
+      "id": "cat_medical",
+      "name": "Medical / Healthcare",
+      "icon": "HeartPulse",
+      "color": "#ef4444",
+      "isDefault": true,
+      "sortOrder": 9
+    },
+    {
+      "id": "cat_travel",
+      "name": "Travel / Transport",
+      "icon": "Bus",
+      "color": "#14b8a6",
+      "isDefault": true,
+      "sortOrder": 10
+    },
+    {
+      "id": "cat_shopping",
+      "name": "Shopping",
+      "icon": "ShoppingBag",
+      "color": "#ec4899",
+      "isDefault": true,
+      "sortOrder": 11
+    },
+    {
+      "id": "cat_education",
+      "name": "Education",
+      "icon": "GraduationCap",
+      "color": "#a855f7",
+      "isDefault": true,
+      "sortOrder": 12
+    },
+    {
+      "id": "cat_food",
+      "name": "Food / Restaurant",
+      "icon": "Utensils",
+      "color": "#f59e0b",
+      "isDefault": true,
+      "sortOrder": 13
+    },
+    {
+      "id": "cat_other",
+      "name": "Other Expenses",
+      "icon": "Receipt",
+      "color": "#64748b",
+      "isDefault": true,
+      "sortOrder": 14
+    }
+  ],
+  "expenses": [
+    {
+      "id": "sample_b585ca59",
+      "title": "Morning Buffalo Milk (2L)",
+      "amountPaise": 14000,
+      "categoryId": "cat_milk",
+      "date": "2026-11-23",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "Cash",
+      "notes": "Daily dairy delivery",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_928c4f5a",
+      "title": "Fresh Vegetables & Atta",
+      "amountPaise": 64550,
+      "categoryId": "cat_grocery",
+      "date": "2026-11-23",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "UPI",
+      "notes": "Weekly kirana basket",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_f74a55e2",
+      "title": "Scooter Petrol Refill",
+      "amountPaise": 52000,
+      "categoryId": "cat_fuel",
+      "date": "2026-11-22",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "UPI",
+      "notes": "IndianOil pump",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_020dab7c",
+      "title": "Family Dinner at Spice Garden",
+      "amountPaise": 128000,
+      "categoryId": "cat_food",
+      "date": "2026-11-21",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "UPI",
+      "notes": "Weekend dinner",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_33886f61",
+      "title": "Pharmacy & Vitamin Supplements",
+      "amountPaise": 48500,
+      "categoryId": "cat_medical",
+      "date": "2026-11-20",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "Card",
+      "notes": "Medical store",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_986b8660",
+      "title": "Metro & Auto Commute",
+      "amountPaise": 26000,
+      "categoryId": "cat_travel",
+      "date": "2026-11-19",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "UPI",
+      "notes": "Office travel",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_b607af7d",
+      "title": "Mobile Recharge (Family)",
+      "amountPaise": 59900,
+      "categoryId": "cat_mobile",
+      "date": "2026-11-08",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "UPI",
+      "notes": "84-day prepaid plan",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_229d5677",
+      "title": "Fiber Broadband Plan",
+      "amountPaise": 79900,
+      "categoryId": "cat_internet",
+      "date": "2026-11-06",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "Card",
+      "notes": "100 Mbps unlimited",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_599c1c72",
+      "title": "Home Electricity Bill",
+      "amountPaise": 184000,
+      "categoryId": "cat_electricity",
+      "date": "2026-11-05",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "UPI",
+      "notes": "Monthly electricity bill",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_931ff468",
+      "title": "Monthly House Rent",
+      "amountPaise": 1450000,
+      "categoryId": "cat_rent",
+      "date": "2026-11-01",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "Bank",
+      "notes": "NEFT transfer to landlord",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_ba0bc3ca",
+      "title": "Festive Clothing & Footwear",
+      "amountPaise": 325000,
+      "categoryId": "cat_shopping",
+      "date": "2026-10-18",
+      "month": 10,
+      "year": 2026,
+      "paymentMethod": "Card",
+      "notes": "Seasonal shopping",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_f4da869c",
+      "title": "Online Course & Books",
+      "amountPaise": 149900,
+      "categoryId": "cat_education",
+      "date": "2026-10-14",
+      "month": 10,
+      "year": 2026,
+      "paymentMethod": "Card",
+      "notes": "Skill certification",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_493a9bb1",
+      "title": "Municipal Water Bill",
+      "amountPaise": 32000,
+      "categoryId": "cat_water",
+      "date": "2026-10-10",
+      "month": 10,
+      "year": 2026,
+      "paymentMethod": "UPI",
+      "notes": "Last month utility",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_60130e8c",
+      "title": "Monthly Kirana Stockup",
+      "amountPaise": 289000,
+      "categoryId": "cat_grocery",
+      "date": "2026-10-04",
+      "month": 10,
+      "year": 2026,
+      "paymentMethod": "UPI",
+      "notes": "Rice, dal, oil, spices",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_6bff85c9",
+      "title": "Last Month House Rent",
+      "amountPaise": 1450000,
+      "categoryId": "cat_rent",
+      "date": "2026-10-01",
+      "month": 10,
+      "year": 2026,
+      "paymentMethod": "Bank",
+      "notes": "Monthly rent",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_0a804f24",
+      "title": "Quarterly Fuel & Service",
+      "amountPaise": 215000,
+      "categoryId": "cat_fuel",
+      "date": "2026-09-12",
+      "month": 9,
+      "year": 2026,
+      "paymentMethod": "Card",
+      "notes": "Full tank + oil top-up",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_7c7b49a9",
+      "title": "Two Months Ago Rent",
+      "amountPaise": 1450000,
+      "categoryId": "cat_rent",
+      "date": "2026-09-01",
+      "month": 9,
+      "year": 2026,
+      "paymentMethod": "Bank",
+      "notes": "Monthly rent",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    }
+  ],
+  "incomes": [
+    {
+      "id": "sample_inc_d10cfeb4",
+      "title": "UPI Cashback & Refund",
+      "source": "Refund / Cashback",
+      "amountPaise": 35000,
+      "date": "2026-11-23",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "UPI",
+      "notes": "Utility bill cashback",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_inc_1c315682",
+      "title": "UI Consulting Retainer",
+      "source": "Freelance",
+      "amountPaise": 1250000,
+      "date": "2026-11-12",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "Bank",
+      "notes": "Client milestone payment",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_inc_734d0f79",
+      "title": "Monthly Salary Credit",
+      "source": "Salary",
+      "amountPaise": 6500000,
+      "date": "2026-11-01",
+      "month": 11,
+      "year": 2026,
+      "paymentMethod": "Bank",
+      "notes": "Primary monthly salary",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_inc_c0cd57f2",
+      "title": "Dividend Payout",
+      "source": "Investments",
+      "amountPaise": 280000,
+      "date": "2026-10-19",
+      "month": 10,
+      "year": 2026,
+      "paymentMethod": "Bank",
+      "notes": "Quarterly equity dividend",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_inc_fff5cc07",
+      "title": "Last Month Salary Credit",
+      "source": "Salary",
+      "amountPaise": 6500000,
+      "date": "2026-10-01",
+      "month": 10,
+      "year": 2026,
+      "paymentMethod": "Bank",
+      "notes": "Monthly salary",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "sample_inc_5f4b4a38",
+      "title": "Two Months Ago Salary",
+      "source": "Salary",
+      "amountPaise": 6500000,
+      "date": "2026-09-01",
+      "month": 9,
+      "year": 2026,
+      "paymentMethod": "Bank",
+      "notes": "Monthly salary",
+      "isSample": true,
+      "createdAt": "2026-11-23T12:13:11.849Z",
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    }
+  ],
+  "budgets": [
+    {
+      "id": "total",
+      "categoryId": null,
+      "amountPaise": 3500000,
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "cat:cat_grocery",
+      "categoryId": "cat_grocery",
+      "amountPaise": 500000,
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "cat:cat_food",
+      "categoryId": "cat_food",
+      "amountPaise": 300000,
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    },
+    {
+      "id": "cat:cat_fuel",
+      "categoryId": "cat_fuel",
+      "amountPaise": 250000,
+      "updatedAt": "2026-11-23T12:13:11.849Z"
+    }
+  ],
+  "settings": {
+    "currency": "INR",
+    "dateFormat": "DD/MM/YYYY",
+    "theme": "light",
+    "hideAmounts": false,
+    "autoBackup": true
+  }
+}
